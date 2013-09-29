@@ -1,0 +1,10 @@
+Origin: Host API repository
+Label: Host API repository
+Suite: stable
+Codename: wheezy
+Description: Host API repository
+Architectures: i386 amd64 armel armhf
+Components: main
+DebOverride: override.wheezy
+DscOverride: override.wheezy
+SignWith: 4F81039F

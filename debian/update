@@ -1,0 +1,2 @@
+#!/bin/sh -e
+reprepro includedeb wheezy /tmp/host-api_*_all.deb
