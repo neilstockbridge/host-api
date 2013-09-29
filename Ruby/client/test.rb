@@ -3,8 +3,8 @@
 require "host_api"
 require "yaml"
 
-rh = HostAPI::RemoteHost.new :hostname => "localhost", :remote_user => ENV["USER"], :key => "id_rsa", :transcript => $stdout
-ct = rh.context "ro.dist.System"
+rh = HostAPI::RemoteHost.new :hostname => "wet.metaname.net", :remote_user => ENV["USER"], :key => "host-management", :transcript => $stdout
+ct = rh.context "com.example.System"
 #ct.system_load
 puts ct.file_systems.to_yaml
 

@@ -8,7 +8,7 @@ require "socket"
 
 module System
 
-  NAMESPACE = "ro.dist.System"
+  NAMESPACE = "com.example.System"
 
   PARAMS_OF_METHOD = {
     "memory" =>                   %w||,
