@@ -18,7 +18,7 @@ if TESTING
 else
   BASE = "/usr/share/host-api"
   CONFIG_FILE = "/etc/host-api.yml"
-  LOG_FILE = "/var/log/host-api.log"
+  LOG_FILE = "/var/log/host-api/%s.log"% ENV["USER"]
 end
 $LOAD_PATH.concat [ BASE, File.join(BASE,"plugins")]
 
