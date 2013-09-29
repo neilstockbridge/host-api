@@ -26,3 +26,12 @@ The client depends upon the `PubkeyAuthentication` feature of SSH.  A key pair m
 
 The authorised client IP address(es) and the public key must be changed in the above of course.
 
+
+## Testing
+
+    git clone git@github.com:neilstockbridge/host-api.git
+
+..then edit `Ruby/client/test.rb` to reflect your host, remote user and key then:
+
+    ./test.rb
+
