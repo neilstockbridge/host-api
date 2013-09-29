@@ -9,8 +9,8 @@ The "client" is the code that invokes the remote method while the "host" is the 
  + HostAPI establishes an SSH connection to the host, logging in as the remote user and offering the key
  + The key has already been authorised by remote user on the host ( with source-IP and `command` restrictions)
  + `host-api` is started by `sshd` on the remote host, which waits for something exciting to appear on its `stdin`
- + HostAPI on the client serializes the method invocation using [JSON-RPC] and writes the serialized form to `stdout` in the SSH session.  The JSON-RPC method name for context `com.example.System` and method `file_systems` is encoded as `com.example.System/file_systems`
- + The remote host unpacks the method invocation, locates the specified plugin, invokes the method and returns the response on its `stdout`
+ + HostAPI on the client serializes the method invocation using [JSON-RPC] and writes the serialized form to `stdout` in the SSH session.  The JSON-RPC method name for the method `file_systems` in context `com.example.System` is encoded as `com.example.System/file_systems`
+ + The remote host unpacks the method invocation, locates the plugin specified by the context, invokes the method and returns the outcome on its `stdout`
  + HostAPI on the client parses the response and returns real objects ( scalars or arbitrarily complex compositions of lists, maps and scalars as permitted by JSON-RPC)
 
   [JSON-RPC]: http://www.jsonrpc.org/
