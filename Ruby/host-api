@@ -37,6 +37,13 @@ class Exception
 end
 
 
+def log message
+  File.open LOG_FILE, "a" do |f|
+    f.puts "  %s  %s"% [ Time.now.strftime("%k:%M"), message]
+  end
+end
+
+
 class Session
 
   # MODULE_IN_SPACE is a map from namespace[String] to the plugin[Module] that
@@ -91,12 +98,6 @@ class Session
   end
 
  private
-
-  def log message
-    File.open LOG_FILE, "a" do |f|
-      f.puts "  %s  %s"% [ Time.now.strftime("%k:%M"), message]
-    end
-  end
 
   def camelize string
     string.capitalize.gsub(/_./) {|match| match.slice(1,1).upcase }
