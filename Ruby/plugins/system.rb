@@ -6,6 +6,18 @@
 require "socket"
 
 
+class Array
+
+  def first_where
+    self.each do |item|
+      return item if yield item
+    end
+    nil
+  end
+
+end
+
+
 module System
 
   NAMESPACE = "com.example.System"
@@ -17,6 +29,7 @@ module System
     "system_load" =>              %w||,
     "time" =>                     %w||,
     "file_systems" =>             %w||,
+    "disc_usage" =>               %w|path_to_dir|,
     "lvm" =>                      %w||,
     "packages_awaiting_update" => %w||,
   }
@@ -230,6 +243,53 @@ module System
   end
 
 
+  # @return [Array] A list of entries.  Each entry is an Array with the following items:
+  #                   + name, usage(KB), list of child entries
+  def disc_usage path_to_dir
+    bugger "path must be absolute" unless path_to_dir.start_with? "/"
+    bugger "path must not trail slash" if path_to_dir.end_with? "/"
+    root = Node.new  path_to_dir
+    output_of("du -xk \"#{path_to_dir}\"").each_line do |line|
+      line.chomp!
+      usage, path = line.split "\t"
+      # Rip off the common prefix and the separator:
+      path = path.slice  path_to_dir.length+1 .. -1
+      # The root path will be nil
+      node = root
+      if path != nil
+        elements = path.split "/"
+        name = elements.last
+        elements.each do |element|
+          # Find the child of "node" with name "element"
+          parent = node
+          node = parent.children.first_where {|child| child.name == element }
+          if node.nil?
+            node = Node.new  element
+            parent.children << node
+          end
+        end
+      end
+      node.usage = usage.to_i
+    end
+    root
+  end
+
+
+  class Node
+
+    attr_accessor :name, :usage, :children
+
+    def initialize name
+      @name = name
+      @children = []
+    end
+
+    def to_json options = {}
+      [@name,@usage,@children].to_json options
+    end
+  end
+
+
   def lvm
     #EXAMPLE OUTPUT OF vgdisplay:
     #  --- Volume group ---
@@ -324,6 +384,10 @@ module System
 
   def output_of command
     IO.popen( command) {|stream| stream.read }
+  end
+
+  def bugger message
+    raise JsonRpc::Error.new 1, message
   end
 
   end # of class methods
