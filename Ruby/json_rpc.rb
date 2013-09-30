@@ -2,7 +2,7 @@
 # Copyright (C) 2011-2013 Neil Stockbridge
 # License: GPLv2
 
-require "json"
+require "json/pure"
 
 
 # Example:

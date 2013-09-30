@@ -284,8 +284,8 @@ module System
       @children = []
     end
 
-    def to_json options = {}
-      [@name,@usage,@children].to_json options
+    def to_json
+      [@name,@usage,@children].to_json
     end
   end
 
