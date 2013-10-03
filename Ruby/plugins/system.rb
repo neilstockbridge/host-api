@@ -18,6 +18,26 @@ class Array
 end
 
 
+class Dir
+  class << self
+
+    # Visits each entry in the specified directory ( except for . and ..) and
+    # all sub-directories and their entries recursively.
+    #
+    def walk path_to_dir, &block
+      yield path_to_dir
+      Dir.foreach( path_to_dir) do |name|
+        next if %w|. ..|.include?  name
+        path = File.join  path_to_dir, name
+        yield path
+        walk path, &block if File.directory? path
+      end
+    end
+
+  end
+end
+
+
 module System
 
   NAMESPACE = "com.example.System"
@@ -32,6 +52,7 @@ module System
     "disc_usage" =>               %w|path_to_dir|,
     "lvm" =>                      %w||,
     "packages_awaiting_update" => %w||,
+    "latest_change_under" =>      %w|path_to_dir|,
   }
 
   class << self
@@ -377,6 +398,28 @@ module System
 
   def orphaned_packages
     `deborphan`
+  end
+
+
+  # Provides the most recent mtime of any entry in the specified directory or
+  # any of its subdirectories ( recursively).
+  #
+  def latest_change_under path_to_dir
+    latest_change = nil
+    begin
+      Dir.walk( path_to_dir) do |path_to_entry|
+        mtime = File.lstat( path_to_entry).mtime
+        if latest_change.nil?
+          latest_change = {:path => path_to_entry, :mtime => mtime }
+        elsif latest_change[:mtime] < mtime
+          latest_change[:path] = path_to_entry
+          latest_change[:mtime] = mtime
+        end
+      end
+    rescue Errno::ENOENT
+      bugger "No such directory"
+    end
+    latest_change
   end
 
 
