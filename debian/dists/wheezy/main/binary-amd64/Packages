@@ -1,15 +1,15 @@
 Package: host-api
-Version: 2013-10-03.1
+Version: 2013-10-03.2
 Architecture: all
 Maintainer: Neil Stockbridge <neil@dist.ro>
-Depends: ruby, ruby-json | libjson-ruby, ruby-net-ssh | libnet-ssh2-ruby
+Depends: ruby, ruby-json | libjson-ruby, ruby-net-ssh | libnet-ssh2-ruby | libnet-ssh-ruby1.8
 Priority: standard
 Section: admin
-Filename: pool/main/h/host-api/host-api_2013-10-03.1_all.deb
-Size: 9396
-SHA256: 82effbc164a1a27823bd8cc707c82f0d7868b4b90761d59e7d5685b203f80de4
-SHA1: 13511a4b03d13a18e5b23a0f80bc85528c880c06
-MD5sum: 0f488f16b7fcca8191c5cfbbc739a1c7
+Filename: pool/main/h/host-api/host-api_2013-10-03.2_all.deb
+Size: 9402
+SHA256: 993c7492ad73dbc31441980f625e5a5c82b457c0d369651ecc73133775c8ff75
+SHA1: bcc924fdfe5ec6612a89907978ae1b0793f17639
+MD5sum: 06a8521c80de7094cd431c055908c14e
 Description: A simple library to support using SSH for RPC
  Host API is a simple library that supports using SSH for RPC.
 
