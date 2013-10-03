@@ -61,7 +61,7 @@ module HostAPI
       def method_missing method_name, *params
 
         method_name = @namespace+"/#{method_name}"
-        log "Invoking #{method_name} on #{@hostname} as #{@remote_user}" if @transcript
+        @transcript.puts "  Invoking #{method_name} on #{@hostname} as #{@remote_user}" if @transcript
         transport = lambda do |request_as_json|
 
           response = ""
@@ -73,15 +73,27 @@ module HostAPI
 
             session.open_channel do |channel|
 
-              channel.on_data do |channel, output|
-                response += output
-              end
+              remote_command = "host-api"
+              channel.exec  remote_command do |ch, success|
 
-              # Cause the automatic command to fire and produce its output in the
-              # callback
-              channel.exec "host-api"
-              channel.send_data  request_as_json
-              channel.eof!
+                if ! success
+                  raise JsonRpc::Error.new -32603, "Could not invoke: #{remote_command}"
+                end
+
+                channel.on_data do |ch, output|
+                  response += output
+                end
+
+                channel.on_extended_data do |ch, error|
+                  @transcript.puts "remote stderr: #{error}"
+                end
+
+                # Cause the automatic command to fire and produce its output in
+                # the callback
+                channel.send_data  request_as_json
+                channel.process
+                channel.eof!
+              end
             end
 
             session.loop
@@ -93,12 +105,6 @@ module HostAPI
         remote = JsonRpc::Remote.new  transport
         remote.transcript = JsonRpc::StreamTranscript.new @transcript if @transcript
         remote.invoke_method  method_name, *params
-      end
-
-
-      # TODO: Re-route this to your logging system.
-      def log message
-        puts "  "+ message
       end
 
     end # of class Context
