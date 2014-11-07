@@ -5,7 +5,7 @@ Origin: Host API repository
 Label: Host API repository
 Suite: stable
 Codename: wheezy
-Date: Thu, 03 Oct 2013 07:37:34 UTC
+Date: Fri, 07 Nov 2014 10:25:10 UTC
 Architectures: i386 amd64 armel armhf
 Components: main
 Description: Host API repository
@@ -51,11 +51,11 @@ SHA256:
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iQEcBAEBAgAGBQJSTR7BAAoJED38Mh5PgQOf4agH/j6x+arTTq+aeGeQilgCuh2v
-tjiNXgoraGHzM3jlnOncPhGNZc+EWSnvTaMMKhPPNzEVyopwE3VLMTnGb8+4Le1B
-jn15P6O7+6IXS9lnVF0HbnvhgDHylywal0cvx9izQn+93dHDvIJ0bB5GNdEDZUIi
-0iavZieW9rPxJR7xuUmgKShPtMN/jj+1rIk+mztGV1D34P29XvR1TMOjmnxWZkiz
-ZVJDzFlFfp+M+zRI0ytj/bJAovM24MUFh/yWdcr6LNe0cfrS9DMH+KZscIKRiKSo
-/3MP6X86DTWjS/E29kwrvu7iG4oXSWAsrr0YN2tZrZQUSNfpwZk14GcQ8aI5HDg=
-=cass
+iQEcBAEBAgAGBQJUXJ4GAAoJED38Mh5PgQOfaF0IAL4u5+BKnXGuXMlum0QAycRR
+QmltaDmZbqjEBoLPHRM9BJZ+nBz0nD3F+WTRE6bzf27QnND+vdoQ0jJllWpasDsM
+ZgZcPNIXumV/nOYnAVtlXePAgChQSY60erlJw/XkFKz4F1cyPXpfQMYDnNkniwvS
+7zCfJKPDy1sJkb/uL7eIFHYUElpt41B0ARLzGXt8uNIcLdxHFAyBmTiW66NB2waE
+x8uZFpExNCDKxJ+qo/2IMvG7tRzBvW9R/2r8jfvl/Nq7ZucuyNTYRJJUOudVKMyF
+5SDU8UecK8OX1JcghUeKFOQmXxKhsy/Nlkl6x7sULcSXSvAXGMTMFolv2ERgHjk=
+=3k3a
 -----END PGP SIGNATURE-----
