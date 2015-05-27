@@ -5,7 +5,7 @@ Origin: Host API repository
 Label: Host API repository
 Suite: stable
 Codename: wheezy
-Date: Wed, 27 May 2015 08:38:34 UTC
+Date: Wed, 27 May 2015 09:21:31 UTC
 Architectures: i386 amd64 armel armhf
 Components: main
 Description: Host API repository
@@ -51,11 +51,11 @@ SHA256:
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iQEcBAEBAgAGBQJVZYKXAAoJED38Mh5PgQOf7RkH/jVI47VyhdpXS55nq3Pdnv4k
-2HYy3qzPcRfxF3pjqWwnUSUINuYf5iFq5+YYyyrfxqwiRlge9RsyQsGWeN7/wXvS
-kNb5wKUvRonXCtLkDZWe3fGySzSR/Gbvi98Xx9SkfIzQMMQh0CyNqo2MvEa1VdVJ
-ZUy9e5I+nDo8APs1hxAT37Hsh3wFZCCr75dwXa7mf6XHIqRHMBAhrJbKb/AeekWN
-r5lGbDrkfx7NnSLYAejO46aWDwKD6wNadprNFvGselo2y9UiTpNsXJu9TEmBRfI0
-oHpULFy82WQS+pNfbp5bVz6lR8jg3pBrRzIrSB85HyQpwdvfmmCRJ05P4h6zRLw=
-=y4Lt
+iQEcBAEBAgAGBQJVZYyjAAoJED38Mh5PgQOfg7kIAITY2oWURk9BK945g91isuvG
+2bTIku4L9Q1aathtQiMZ2lAM4sVjETiTCAtWZGJHzaiDL+CfurnOyect+zfuH+nm
+wWVwfXYFPROn9Z2jdHoN2Di41QGSIzpUSl50mO2PIeYeGrXfdTxFTyIo4RhUx35U
+yhKTUbC/d71vrg3QJkXWWNYePCOk4LcE+h3d9+FZ6HeX9UO5HgWzL4KFSL0xR0Pg
+JLMxjFr+I3lY0NjeVPQooiT8RYCpeTR230FjQW2OykTV8L1WSVR4C+MOF4N5vX4T
+4KLB3PvuP6CHeqUQ2XWulG1TOi1HpX3D0trn0axkJgAZCCGr6l2xkm775Ytbn0U=
+=itbH
 -----END PGP SIGNATURE-----
