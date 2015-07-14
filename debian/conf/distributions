@@ -7,4 +7,4 @@ Architectures: i386 amd64 armel armhf
 Components: main
 DebOverride: override.wheezy
 DscOverride: override.wheezy
-SignWith: CFA81294
+SignWith: 4F81039F
