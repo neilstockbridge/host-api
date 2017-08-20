@@ -1,5 +1,5 @@
 Package: host-api
-Version: 2013-10-03.2
+Version: 2017-08-21.1
 Architecture: all
 Maintainer: Neil Stockbridge <neil@dist.ro>
 Depends: ruby, ruby-json | libjson-ruby, ruby-net-ssh | libnet-ssh2-ruby | libnet-ssh-ruby1.8
