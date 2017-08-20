@@ -15,10 +15,12 @@ if TESTING
   BASE = BIN_DIR
   CONFIG_FILE = File.join BIN_DIR, "host-api.yml"
   LOG_FILE = "/tmp/host-api.log"
+  LOG_INFO = true
 else
   BASE = "/usr/share/host-api"
   CONFIG_FILE = "/etc/host-api.yml"
   LOG_FILE = "/var/log/host-api/%s.log"% ENV["USER"]
+  LOG_INFO = false
 end
 $LOAD_PATH.concat [ BASE, File.join(BASE,"plugins")]
 
@@ -68,9 +70,9 @@ class Session
       loop do
         request_as_json = gets
         break if request_as_json.nil? # happens when the client closes the link
-        log "> #{request_as_json}"
+        log "> #{request_as_json}" if LOG_INFO
         response_as_json = rpc_response_to  request_as_json
-        log  response_as_json
+        log  response_as_json if LOG_INFO
         puts  response_as_json
       end
     rescue StandardError => e

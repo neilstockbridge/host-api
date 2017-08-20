@@ -85,7 +85,8 @@ module HostAPI
                 end
 
                 channel.on_extended_data do |ch, error|
-                  @transcript.puts "  Remote stderr: #{error}"
+                  # FIXME: Probably best to raise an exception
+                  (@transcript or $stderr).puts "  Remote stderr: #{error}"
                 end
 
                 # Cause the automatic command to fire and produce its output in
