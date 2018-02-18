@@ -81,7 +81,7 @@ Remote: class Remote
         # If there was an error on the server..
         if (error = response.error)?
           @shit error.code, error.message, error.data
-        else if not response.result?
+        else if not response.hasOwnProperty 'result'
           @shit -32603, 'Neither result nor error present'
 
         callback  undefined, response.result
