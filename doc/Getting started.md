@@ -21,7 +21,7 @@ The configuration file `/etc/host-api.yml` determines which plugins are availabl
 The client depends upon the `PubkeyAuthentication` feature of SSH.  A key pair must be generated and the key authorized on the remote host like this:
 
     cat <<'.' >> ~/.ssh/authorized_keys
-    command="/usr/bin/host-api",from="203.0.113.1",no-agent-forwarding,no-port-forwarding,no-pty,no-X11-forwarding ssh-rsa YOUR-PUB-KEY-HERE automated host management
+    from="203.0.113.1",no-port-forwarding,no-agent-forwarding,no-X11-forwarding,no-user-rc,no-pty,command="/usr/bin/host-api 2>>/var/log/host-api/stderr.log" ssh-rsa YOUR-PUB-KEY-HERE automated host management
     .
 
 The authorised client IP address(es) and the public key must be changed in the above of course.
