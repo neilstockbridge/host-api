@@ -1,5 +1,4 @@
 
-process = require 'process'
 Path = require 'path'
 fs = require 'fs'
 SSH = require 'ssh2'
@@ -20,6 +19,8 @@ class RemoteHost
   # host.  Parameters
   #
   # + hostname:     The fully qualified host name of the host
+  # + port:         The port on which to connect with `hostname`.  The default
+  #                 is 22
   # + remote_user:  The user on the remote host to connect as.  The default is
   #                 'root'
   # + key:          The filename ( within ~/.ssh/) of the key that permits this
@@ -29,6 +30,7 @@ class RemoteHost
   #                 messages.  The default is to be quiet.
   #
   constructor: (@params) ->
+    @params.port ?= 22
     @params.key ?= 'id_rsa'
     @params.remote_user ?= 'root'
 
@@ -50,6 +52,7 @@ class RemoteHost
 
       path_to_key = Path.join  process.env.HOME, '.ssh', @key
       hostname = @hostname
+      port = @port
       remote_user = @remote_user
 
       transport =
@@ -82,7 +85,7 @@ class RemoteHost
               stream.end()
           .connect
             host: hostname
-            port: 22
+            port: port
             username: remote_user
             privateKey: fs.readFileSync  path_to_key
 
