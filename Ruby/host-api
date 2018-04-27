@@ -57,16 +57,18 @@ class Session
   PARAMS_OF_METHOD = {}
 
   def hold
-    conf = YAML.load File.read CONFIG_FILE
-    conf["plugins"].each do |plugin_name|
-      require plugin_name
-      plugin = eval camelize( plugin_name)
-      MODULE_IN_SPACE[ plugin::NAMESPACE] = plugin
-      plugin::PARAMS_OF_METHOD.each_pair do |method_name, params|
-        PARAMS_OF_METHOD[ plugin::NAMESPACE+"/#{method_name}"] = params
-      end
-    end
     begin
+      conf = YAML.load File.read CONFIG_FILE
+      conf["plugins"].each do |plugin_name|
+        #log "loading #{plugin_name}"
+        require plugin_name
+        #log "loaded"
+        plugin = eval camelize( plugin_name)
+        MODULE_IN_SPACE[ plugin::NAMESPACE] = plugin
+        plugin::PARAMS_OF_METHOD.each_pair do |method_name, params|
+          PARAMS_OF_METHOD[ plugin::NAMESPACE+"/#{method_name}"] = params
+        end
+      end
       loop do
         request_as_json = gets
         break if request_as_json.nil? # happens when the client closes the link
@@ -75,7 +77,7 @@ class Session
         log  response_as_json if LOG_INFO
         puts  response_as_json
       end
-    rescue StandardError => e
+    rescue Exception => e   # `Exception` includes `LoadError` from `require`
       log "ERROR: "+ e.info
     end
   end
