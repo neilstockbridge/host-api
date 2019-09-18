@@ -41,7 +41,7 @@ end
 
 def log message
   File.open LOG_FILE, "a" do |f|
-    f.puts "  %s  %s"% [ Time.now.strftime("%k:%M"), message]
+    f.puts "  %s  %s"% [Time.now.strftime("%F %T"), message]
   end
 end
 
