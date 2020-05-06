@@ -28,6 +28,27 @@ module JsonRpc
       @data = data
     end
 
+    module Helper
+      {
+        "Parse error"=>       -32700,
+        "Invalid Request"=>   -32600,
+        "Method not found"=>  -32601,
+        "Invalid params"=>    -32602,
+        "Internal error"=>    -32603,
+      }.each_pair do |message, code|
+        method_name = message.downcase
+        method_name.gsub! " ", "_"
+        #"Method not found"=> "method_not_found"
+        define_method  method_name do |data|
+          JsonRpc::Error.new  code, message, data
+        end
+      end
+    end
+
+    class << self
+      include Helper
+    end
+
   end # of Error
 
 
