@@ -1,0 +1,16 @@
+#!/bin/sh -e
+
+CONF="/etc/host-api.yml"
+BACKUP="/tmp/backup-of-host-api.yml"
+DEFAULT="/usr/share/host-api/host-api.yml"
+
+# If there is a backup of the configuration file then it should be restored
+if [ -f "$BACKUP" ]; then
+  mv "$BACKUP" "$CONF"
+else
+  # If there is no backup file then..
+  # If there is no configuration file then the default configuration file
+  # should be installed
+  [ ! -e "$CONF" ]  &&  cp "$DEFAULT" "$CONF"
+fi
+

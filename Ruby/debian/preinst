@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+CONF="/etc/host-api.yml"
+BACKUP="/tmp/backup-of-host-api.yml"
+
+# If there is already a configuration file then it should be backed up because
+# older versions included the configuration file as part of the package so it
+# will be removed
+[ -f "$CONF" ]  &&  cp "$CONF" "$BACKUP"
+
