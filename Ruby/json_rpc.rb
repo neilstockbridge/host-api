@@ -130,7 +130,7 @@ module JsonRpc
           is_notification = ! request.has_key?("id")
           id = request["id"]
           # id MUST be a String, Number ( might be fractional, discouraged) or null ( also discouraged) if included
-          raise rpc_invalid_request "invalid id" unless [NilClass, Fixnum, String, Float].include? id.class
+          raise rpc_invalid_request "invalid id" unless [NilClass, Numeric, String, Float].any? do |type| id.is_a? type end
           method_name = request["method"]
           raise rpc_invalid_request "method name absent" if method_name.nil?
           # Method names MUST NOT begin with "rpc."
