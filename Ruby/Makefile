@@ -15,7 +15,7 @@ all:
 	install --directory $(DESTDIR)/usr/bin
 	install --mode=0755 --preserve-timestamps host-api $(DESTDIR)/usr/bin
 	install --directory $(DESTDIR)/etc
-	install --mode=0644 --preserve-timestamps host-api.yml $(DESTDIR)/etc
+	install --mode=0644 --preserve-timestamps host-api.yml $(DESTDIR)/usr/share/$(PROJECT)/host-api.yml
 	install --directory --mode=01777 $(DESTDIR)/var/log/host-api
 	install --directory $(DESTDIR)/DEBIAN
 	install debian/* $(DESTDIR)/DEBIAN
