@@ -19,7 +19,7 @@ all:
 	install --directory --mode=01777 $(DESTDIR)/var/log/host-api
 	install --directory $(DESTDIR)/DEBIAN
 	install debian/* $(DESTDIR)/DEBIAN
-	dpkg --build $(DESTDIR)
+	dpkg-deb --build -Zgzip $(DESTDIR)
 	rm -Rf $(DESTDIR)
 
 clean:
