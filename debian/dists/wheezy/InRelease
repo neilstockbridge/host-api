@@ -1,61 +1,61 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
+Hash: SHA512
 
 Origin: Host API repository
 Label: Host API repository
 Suite: stable
 Codename: wheezy
-Date: Sun, 20 Aug 2017 21:15:34 UTC
+Date: Tue, 12 May 2020 05:16:59 UTC
 Architectures: i386 amd64 armel armhf
 Components: main
 Description: Host API repository
 MD5Sum:
- 5f526c43aa580fe92a34b33783241422 586 main/binary-i386/Packages
- 275f9e0180aaa678a8cc14d5d1038775 402 main/binary-i386/Packages.gz
+ cb0e5497519c774053efcdab90814044 590 main/binary-i386/Packages
+ 0198ee3596a2871091603b8c4a63c18a 401 main/binary-i386/Packages.gz
  a91bd1d2f2771353e566852c914c1b52 139 main/binary-i386/Release
- 5f526c43aa580fe92a34b33783241422 586 main/binary-amd64/Packages
- 275f9e0180aaa678a8cc14d5d1038775 402 main/binary-amd64/Packages.gz
+ cb0e5497519c774053efcdab90814044 590 main/binary-amd64/Packages
+ 0198ee3596a2871091603b8c4a63c18a 401 main/binary-amd64/Packages.gz
  b789ab153fd2f9f59b9e22bb9d9aeb12 140 main/binary-amd64/Release
- 5f526c43aa580fe92a34b33783241422 586 main/binary-armel/Packages
- 275f9e0180aaa678a8cc14d5d1038775 402 main/binary-armel/Packages.gz
+ cb0e5497519c774053efcdab90814044 590 main/binary-armel/Packages
+ 0198ee3596a2871091603b8c4a63c18a 401 main/binary-armel/Packages.gz
  42ab7739b91be014549a3c6ef73a160e 140 main/binary-armel/Release
- 5f526c43aa580fe92a34b33783241422 586 main/binary-armhf/Packages
- 275f9e0180aaa678a8cc14d5d1038775 402 main/binary-armhf/Packages.gz
+ cb0e5497519c774053efcdab90814044 590 main/binary-armhf/Packages
+ 0198ee3596a2871091603b8c4a63c18a 401 main/binary-armhf/Packages.gz
  52df54ca925c4086a3d63b55abc9e9b2 140 main/binary-armhf/Release
 SHA1:
- c337085bf2c7b22b897f1b38465ab61a38ddceb3 586 main/binary-i386/Packages
- 670fc26bbd5b13ff4e4a9cb35282b7372e21a4de 402 main/binary-i386/Packages.gz
+ ca74a17d1ecd6583761e776929bdec7e7f84ca22 590 main/binary-i386/Packages
+ 4c8a113fd2b10148c236164f007434163160e1bd 401 main/binary-i386/Packages.gz
  0652792be692884ca81a921bd2f32e97ce53c8e9 139 main/binary-i386/Release
- c337085bf2c7b22b897f1b38465ab61a38ddceb3 586 main/binary-amd64/Packages
- 670fc26bbd5b13ff4e4a9cb35282b7372e21a4de 402 main/binary-amd64/Packages.gz
+ ca74a17d1ecd6583761e776929bdec7e7f84ca22 590 main/binary-amd64/Packages
+ 4c8a113fd2b10148c236164f007434163160e1bd 401 main/binary-amd64/Packages.gz
  1320c88131d4a4faa73d1dfe53140ffb2607a580 140 main/binary-amd64/Release
- c337085bf2c7b22b897f1b38465ab61a38ddceb3 586 main/binary-armel/Packages
- 670fc26bbd5b13ff4e4a9cb35282b7372e21a4de 402 main/binary-armel/Packages.gz
+ ca74a17d1ecd6583761e776929bdec7e7f84ca22 590 main/binary-armel/Packages
+ 4c8a113fd2b10148c236164f007434163160e1bd 401 main/binary-armel/Packages.gz
  580cc15d6c98c9fc7fc11270bcbd45dac29248aa 140 main/binary-armel/Release
- c337085bf2c7b22b897f1b38465ab61a38ddceb3 586 main/binary-armhf/Packages
- 670fc26bbd5b13ff4e4a9cb35282b7372e21a4de 402 main/binary-armhf/Packages.gz
+ ca74a17d1ecd6583761e776929bdec7e7f84ca22 590 main/binary-armhf/Packages
+ 4c8a113fd2b10148c236164f007434163160e1bd 401 main/binary-armhf/Packages.gz
  dc714107cd1ca6acd2092e54c8c9a46122d0026d 140 main/binary-armhf/Release
 SHA256:
- 00fa3e39acfa0f5d6d9af0edd66a042574b4402119bccc633f0763d36094c871 586 main/binary-i386/Packages
- 7060823ec47b472f3f707cb47664b1f444d6f4cac59daf9f6eee9cc169633424 402 main/binary-i386/Packages.gz
+ 9900cb5116de99bed958d1a7b234185a951afa636ac8e83707ce74c5f23d9be8 590 main/binary-i386/Packages
+ f6773abf7cb28e5706d09b0c94a1b0adee60dad31204df0743a5b6c24c3e2d9f 401 main/binary-i386/Packages.gz
  49bfed6e197a7d77b639796d5c8db317a84ffbe66bb31e30f78cf3cfad810d08 139 main/binary-i386/Release
- 00fa3e39acfa0f5d6d9af0edd66a042574b4402119bccc633f0763d36094c871 586 main/binary-amd64/Packages
- 7060823ec47b472f3f707cb47664b1f444d6f4cac59daf9f6eee9cc169633424 402 main/binary-amd64/Packages.gz
+ 9900cb5116de99bed958d1a7b234185a951afa636ac8e83707ce74c5f23d9be8 590 main/binary-amd64/Packages
+ f6773abf7cb28e5706d09b0c94a1b0adee60dad31204df0743a5b6c24c3e2d9f 401 main/binary-amd64/Packages.gz
  49d459bac0c6df1b54ad51b40860d5fd4160e5e89079de0e11950960c05a6e25 140 main/binary-amd64/Release
- 00fa3e39acfa0f5d6d9af0edd66a042574b4402119bccc633f0763d36094c871 586 main/binary-armel/Packages
- 7060823ec47b472f3f707cb47664b1f444d6f4cac59daf9f6eee9cc169633424 402 main/binary-armel/Packages.gz
+ 9900cb5116de99bed958d1a7b234185a951afa636ac8e83707ce74c5f23d9be8 590 main/binary-armel/Packages
+ f6773abf7cb28e5706d09b0c94a1b0adee60dad31204df0743a5b6c24c3e2d9f 401 main/binary-armel/Packages.gz
  a825fe9fb168be6d6cd25b73f347cc6b9478ba08d8e212fbfb328439d678c56d 140 main/binary-armel/Release
- 00fa3e39acfa0f5d6d9af0edd66a042574b4402119bccc633f0763d36094c871 586 main/binary-armhf/Packages
- 7060823ec47b472f3f707cb47664b1f444d6f4cac59daf9f6eee9cc169633424 402 main/binary-armhf/Packages.gz
+ 9900cb5116de99bed958d1a7b234185a951afa636ac8e83707ce74c5f23d9be8 590 main/binary-armhf/Packages
+ f6773abf7cb28e5706d09b0c94a1b0adee60dad31204df0743a5b6c24c3e2d9f 401 main/binary-armhf/Packages.gz
  8e017858a06d00103b078bccda596f586bb5865684c999f2a317fb1654afee78 140 main/binary-armhf/Release
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1
 
-iQEcBAEBAgAGBQJZmfwBAAoJED38Mh5PgQOf+JcIAKZBmRz7/6ZAOWbQGZ0qDshC
-m6p+BbAyvF9Yl2jgOaGnUhKqS8t/W/BmrT4Os5aPzSIs0ncuSZ4nAq75EGH3wbx2
-HuQJwLv1rKDH8O5b1Vw9XF8I+lqNzcPIIRy6a0eP0BY4eFCN1aeD1V1w2yRdbzP0
-taCV36EYK6QkOfNIVt7hfBjcdy+o7tPXpx0oM9drOxyvoWTCbOmk7eLdj7Ttvpku
-vItXMQ+HpMa1meb3jN1Qum5YNyRBJqwCkiTKMgpihgIUR276o2PNUsFcoBRNmaHB
-Nc/tX89nQoS+gxjJ0u/K5xiWMUesusu3ltdvhhItE9h7xb0LrbejS208EDczdPE=
-=/nAA
+iQEzBAEBCgAdFiEE4fFtgoeHgf/cboR1PfwyHk+BA58FAl66MU4ACgkQPfwyHk+B
+A59g6wf/aFlJpnAvEh97GAor+OkLL3/Aua9GHTMJrJoyehpS9sUohaKEPZTKbjyr
+mD4G1yGJV0yTcSS3bYbJhElzEWl7aJR/xVBGMNcPh8AR7Lm3nyquzmBIX7QsrOTj
+Bhg7G0SSmiVPJR18nOu46QixhbXb5BfNgaNMHpiwIrtgGnRWekoDDVOLvI9MHbbl
+osne+FnEKWDfHhFN21C/qkuIlUUJqO39IbV5M01W1Gq5BlHqW+YW+RpzY3/mIdke
+WATQbw9ZM0Ctjz4w6S0vKnNG7Ul9lSldHpvQZ562ZF9mkAwufKgYQr3PjHimUgLB
+4V50xsvuf8+KLE/rV+6M9oemuGzcEQ==
+=BIGp
 -----END PGP SIGNATURE-----
