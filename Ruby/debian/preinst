@@ -8,3 +8,5 @@ BACKUP="/tmp/backup-of-host-api.yml"
 # will be removed
 [ -f "$CONF" ]  &&  cp "$CONF" "$BACKUP"
 
+exit 0
+
